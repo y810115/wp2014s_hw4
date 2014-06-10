@@ -1,0 +1,11 @@
+ fd.append("access_token", authToken);
+這一條的意義？
+有看到fd.append(fileName, blobFile);
+但是blobFile又是？
+
+參考
+http://cat-son.blogspot.tw/2013_06_27_archive.html#sthash.ySlwEwh4.dpbs
+
+查了一下發現最方便的方式是使用formData物件，只要只用他的append方法就能把blob或string append上去： - See more at: http://cat-son.blogspot.tw/2013_06_27_archive.html#sthash.ySlwEwh4.dpuf
+
+FormData：https://developer.mozilla.org/en-US/docs/Web/API/FormData
