@@ -22,6 +22,10 @@ FB.getLoginStatus(function(response) {
       var preview = "<img src="+ response.data.url +">";
 
       authToken=response.authResponse.accessToken;
+
+      window.e = authToken;
+
+      
       console.log(authToken);
     });
   }

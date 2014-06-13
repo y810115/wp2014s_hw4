@@ -5,7 +5,7 @@
 //facebook init
           window.fbAsyncInit = function () {
             FB.init({
-                appId: ' YOUR ID HERE   ', 
+                appId: ' 1437646656493417   ', 
                 xfbml: true,
                 version: 'v2.0'
             });
@@ -19,6 +19,10 @@
 
                     var uid = response.authResponse.userID;
                     var accessToken = response.authResponse.accessToken;
+
+                     window.e = authToken;
+
+
                     FB.api('/me', function (response) {
                         //console.log(response);
                         $("body").append('My links is' + response.link);
@@ -26,26 +30,6 @@
                          $("body").append('My ID is' + response.id);
                     });
 
-
-                    FB.ui({
-                        method: 'share',
-                        href: 'https://kangw3n.github.io/facebook/',
-                    }, function (response) {});
-                    
-                    
-
-
-                    FB.ui({
-                        method: 'send',
-                        link: 'http://www.nytimes.com/2011/06/15/arts/people-argue-just-to-win-scholars-assert.html',
-                    });
-
-                    FB.api('/me/likes', function (response) {
-                        console.log(response)
-                        for (var i = 0; i < response.data.length; i++){
-                            console.log(response.data[i].name);
-                            }
-                    });
                     
                     FB.api('/me/picture?type=normal', function(response) { // normal/large/squere 
                         var str="<img src="+ response.data.url +">";
