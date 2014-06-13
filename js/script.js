@@ -16,39 +16,14 @@
 
             FB.getLoginStatus(function (response) {
                 if (response.status === 'connected') {
-
                     var uid = response.authResponse.userID;
                     var accessToken = response.authResponse.accessToken;
-
                      window.e = authToken;
+                       });                
 
-
-                    FB.api('/me', function (response) {
-                        //console.log(response);
-                        $("body").append('My links is' + response.link);
-                         $("body").append('My Username is' + response.username); document.getElementsByTagName('body').innerHTML = ""
-                         $("body").append('My ID is' + response.id);
-                    });
-
-                    
                     FB.api('/me/picture?type=normal', function(response) { // normal/large/squere 
                         var str="<img src="+ response.data.url +">";
-                        $('body').append(str);
-                    });
-                    
-                    
-                    
-                    FB.api('/me/photos', 'post', {
-                        name:"test",
-                        message: 'this is parse photo',
-                        url: "http://140.119.169.167/facebook_temp/facebookdemo/img/facebook.jpg"//如果要init運行只能用絕對絕對路徑
-                    }, function (response) {
-                        if (!response || response.error) {
-                            alert('Error occured:' + response);
-                            console.log(response);
-                        } else {
-                            alert('Post ID: ' + response.id);
-                        }
+                        $('#preview1').attr("src",response.data.url);
                     });
 
                 } else if (response.status === 'not_authorized') {
@@ -59,7 +34,7 @@
                             window.location.reload();
                         };
                     }, {
-                        scope: 'user_about_me,email,user_location,user_photos,publish_actions,user_birthday,user_likes'
+                        scope: 'user_location,user_photos'
                     });
                 } else {
                     console.log("this isn't logged in to Facebook.");
