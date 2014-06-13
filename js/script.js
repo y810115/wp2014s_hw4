@@ -58,7 +58,7 @@
     var img = new Image(); // 新增圖像1
     img.src = "img/overlay.png"; //圖像路徑（路徑自己設，且自己加入想要的圖層）
   var img2 = new Image(); //新增圖像2
-  img2.src = "img/overlayback.png" //圖像路徑
+  img2.src = "img/overlayback.jpg" //圖像路徑
   var img3 = new Image();//新增圖像3
   img3.src = "img/typography.png"//圖像路徑
   
@@ -127,7 +127,7 @@
 
 
 
-}; //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<init end
+// }; //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<init end
 
 
 
