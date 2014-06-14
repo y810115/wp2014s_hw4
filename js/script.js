@@ -45,9 +45,9 @@ window.fbAsyncInit = function () {
 	ctx.font='20px "Arial"'; 
 	ctx.fillText("Click here to start fill with Facebook Profile Picture", 40, 270); 
     var img = new Image(); 
-    img.src = "img/overlay.png"; 
+    img.src = "img/overlay2.jpg"; 
 	var img2 = new Image(); 
-	img2.src = "img/overlayback.png" 
+	img2.src = "img/overlayback.jpg" 
 	var img3 = new Image();
 	img3.src = "img/typography.png"
 	
