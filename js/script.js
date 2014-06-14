@@ -47,9 +47,9 @@ window.fbAsyncInit = function () {
     var img = new Image(); 
     img.src = "img/overlay2.jpg"; 
 	var img2 = new Image(); 
-	img2.src = "img/overlayback.jpg" 
+	img2.src = "img/overlayback.jpg" ;
 	var img3 = new Image();
-	img3.src = "img/typography.png"
+	img3.src = "img/typography.png";
 	
     var canvas=document.getElementById("canvas"); 
     var ctx=canvas.getContext("2d"); 
