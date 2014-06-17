@@ -18,6 +18,7 @@ window.fbAsyncInit = function () {
 					 var str="<img src="+ response.data.url +">";
 					 //$('#preview1').append(str);
 					$('#preview1').attr("src",response.data.url); //頁面1顯示
+					//console.log(response);
 				});
 		} else if (response.status === 'not_authorized') {
 			console.log("this user is not authorizied your apps");			
