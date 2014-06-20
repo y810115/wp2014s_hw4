@@ -16,8 +16,8 @@ window.fbAsyncInit = function () {
 			});
 			FB.api('/me/picture?type=large', function(response) { // normal/large/squere 
 					 var str="<img src="+ response.data.url +">";
-					 //$('#preview1').append(str);
-					$('#preview1').attr("src",response.data.url); //頁面1顯示
+					 $('#preview1').append(str);
+					// $('#preview1').attr("src",response.data.url); //頁面1顯示
 					//console.log(response);
 				});
 		} else if (response.status === 'not_authorized') {
